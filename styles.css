@@ -1,0 +1,134 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+  }
+  
+  .navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar h1 {
+    margin: 0;
+  }
+  
+  .navbar-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+  }
+  
+  .navbar li {
+    margin-right: 20px;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .search-container {
+    display: absolute;
+    align-items:center
+  }
+  
+  .search-container input[type=text] {
+    padding: 10px;
+    margin-top: 10px;
+    margin-right: 100px;
+    font-size: 17px;
+    border: none;
+    border-radius: 3px;
+  }
+  
+  .search-container button {
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-left: 5px;
+    background: #ccc;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+  
+  .loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .dot {
+    width: 20px;
+    height: 20px;
+    background-color: #333;
+    border-radius: 50%;
+    margin: 0 5px;
+    animation: wave 1.5s ease-in-out infinite;
+  }
+  
+  .dot:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  
+  .dot:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  
+  @keyframes wave {
+    0%, 60%, 100% {
+      transform: initial;
+    }
+    30% {
+      transform: translateY(-15px);
+    }
+  }
+  
+  /* Hover effects */
+  .navbar li:hover {
+    background-color: #555;
+  }
+  
+  .navbar li:hover a {
+    color: #ff0;
+  }
+  
+  .navbar li:hover ul {
+    display: block;
+  }
+  
+  .navbar ul li ul {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    padding: 10px;
+  }
+  
+  .navbar ul li ul li {
+    margin-top: 5px;
+  }
+  
